@@ -9,6 +9,6 @@ In the first part of this scenarion, we will simply explore how to read and upda
 Later we will explore how to contruct a nightly Handover REport by querying into these documents and saving the queried data along with other new dat pertinent to the Handover process.
 
 ###What has been pre-prepared
-[##LCR Summary Ehrscape Technical tasks](/docs/handover/Leeds_tech_tasks.md)
+[##LCR Summary Ehrscape Technical tasks](/docs/leeds/Leeds_tech_tasks.md)
 
 [Overview of openEHR and Ehrscape](/docs/training/openehr_intro.md)
