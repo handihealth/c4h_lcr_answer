@@ -30,14 +30,14 @@ The baseURL for all Ehrscape API calls is https://rest.ehrscape.com
 
 Al of these parameters are available in the Postman 'Answer environment'
 
-"Username": "answer",
-"Password": "answer99q",
-"Authorisation": "Basic YW5zd2VyOmFuc3dlcjk5cQ==" (only need for Postman)
+"Username": "answer"  
+"Password": "answer99q"  
+"Authorisation": "Basic YW5zd2VyOmFuc3dlcjk5cQ==" (only need for Postman)  
 
-"subjectId": "9999999000" (Ivan Cox)
-"subjectNamespace": "uk.nhs.nhsnumber"
+"subjectId": "9999999000" (Ivan Cox)  
+"subjectNamespace": "uk.nhs.nhsnumber"  
 
-"ehrId": "0da489ee-c0ae-4653-9074-57b7f63c9f16",
+"ehrId": "0da489ee-c0ae-4653-9074-57b7f63c9f16"  
 
 
 ###A. Open the Ehrscape session
@@ -120,7 +120,7 @@ Headers:
     ]
 ````
 
-###F. Retrieve the Patient's most recent Allergies List composition
+###C. Retrieve the Patient's most recent Allergies List composition
 
 We will use the results of the previous query to retrieve one of the compositions via its ''compositionId''.
 
@@ -166,7 +166,7 @@ Headers:
 ````
 
 
-###H. Persist an updated version of the Allergies List Composition as a PUT
+###D. Persist an updated version of the Allergies List Composition as a PUT
 
 All openEHR data is persisted as a COMPOSITION (document) class. openEHR data can be highly structured and potentially complex. To simplify the challenge of persisting openEHR data, examples of  'target composition' data instances have been provided in the Ehrscape ``FLAT JSON`` format.
 
@@ -211,7 +211,7 @@ Headers:
 }
 ````
 
-###C. Run an AQL call displaying a flat list from the Allergies List composition
+###E. Run an AQL call displaying a flat list from the Allergies List composition
 
 Now that we have the patient's ehrId we can use it to locate their existing records.
 We use an Archetype Query Language (AQL) call to retrieve a list of the identifiers and dates of existing Asthma Diary encounter ``composition`` records. Compositions are document-level records which act as the container for all openEHR patient data.
@@ -273,7 +273,7 @@ Headers:
 
 ````
 
-###I. Close the Ehrscape session
+###F. Close the Ehrscape session
 
 The last step in working with Ehrscape is to close the session.
 
@@ -288,7 +288,7 @@ The last step in working with Ehrscape is to close the session.
 }
 ````
 
-##J. Other Services
+##G. Other Services
 
 These are other non-Ehrscape API services.
 
@@ -313,31 +313,29 @@ Headers:
     "previous": null,
     "results": [
         {
-            "id": 351,
-            "title": "Asthma - a booklist to help you manage the condition - from Renfrewshire Libraries",
-            "description": "Renfrewshire Libraries have developed a facility for creating booklists online via a simple search function. One can find out whether Renfrewshire Libraries has a particular title, whether it is available and from which library, etc.\r\n\r\nThis one is about Asthma.",
-            "uri": "https://libcat.renfrewshire.gov.uk/vs/List.csp?SearchT1=asthma&Index1=Keywords&Database=1&PublicationType=NoPreference&Location=NoPreference&SearchMethod=Find_1&SearchTerm1=asthma&OpacLanguage=eng&Profile=Default&EncodedRequest=*D5*2C2*D8*EE*C4*D4*5B*B2*9C*00*26*D8*5Cb*8F&EncodedQuery=*D5*2C2*D8*EE*C4*D4*5B*B2*9C*00*26*D8*5Cb*8F&Source=SysQR&PageType=Start&PreviousList=RecordListFind&WebPageNr=1&NumberToRetrieve=20&WebAction=NewSearch&StartValue=0&RowRepeat=0&ExtraInfo=SearchFromList&SortIndex=Author&SortDirection=1",
-            "locations": [
-                {
-                    "lat": 55.8561,
-                    "lon": -4.4057,
-                    "formatted_address": "Renfrew South & Gallowhill ward, Renfrewshire, PA3 4SF"
-                }
-            ],
-            "tags": [
-                "books",
-                "library",
-                "Asthma",
-                "asthma"
-            ],
-            "owner": "Living Well at the Library",
-            "event_start": null,
-            "event_end": null,
-            "created_on": "2011-07-13T12:46:44.732000+00:00",
-            "modified_on": "2014-04-22T07:15:37.249920+00:00"
-        },
-				...
-}
+   "id": 351,
+   "title": "Asthma - a booklist to help you manage the condition - from Renfrewshire Libraries",
+   "description": "Renfrewshire Libraries have developed a facility for creating booklists online via a simple search function. One can find out whether Renfrewshire Libraries has a particular title, whether it is available and from which library, etc.\r\n\r\nThis one is about Asthma.",
+   "uri": "https://libcat.renfrewshire.gov.uk/vs/List.csp?SearchT1=asthma&Index1=Keywords&Database=1&PublicationType=NoPreference&Location=NoPreference&SearchMethod=Find_1&SearchTerm1=asthma&OpacLanguage=eng&Profile=Default&EncodedRequest=*D5*2C2*D8*EE*C4*D4*5B*B2*9C*00*26*D8*5Cb*8F&EncodedQuery=*D5*2C2*D8*EE*C4*D4*5B*B2*9C*00*26*D8*5Cb*8F&Source=SysQR&PageType=Start&PreviousList=RecordListFind&WebPageNr=1&NumberToRetrieve=20&WebAction=NewSearch&StartValue=0&RowRepeat=0&ExtraInfo=SearchFromList&SortIndex=Author&SortDirection=1",
+   "locations": [
+       {
+           "lat": 55.8561,
+           "lon": -4.4057,
+           "formatted_address": "Renfrew South & Gallowhill ward, Renfrewshire, PA3 4SF"
+       }
+   ],
+   "tags": [
+       "books",
+       "library",
+       "Asthma",
+       "asthma"
+   ],
+   "owner": "Living Well at the Library",
+   "event_start": null,
+   "event_end": null,
+   "created_on": "2011-07-13T12:46:44.732000+00:00",
+   "modified_on": "2014-04-22T07:15:37.249920+00:00"
+},
 
 ````
 
@@ -430,6 +428,6 @@ Headers:
 		<sourceName/>
 		<term>FH: Asthma</term>
 	</description>
-   ....
+   ...
 </sctDescriptionss>
 ````
