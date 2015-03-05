@@ -83,7 +83,7 @@ Headers:
 Now that we have the patient's ehrId we can use it to locate their existing records.
 We use an Archetype Query Language (AQL) call to retrieve a list of the identifiers and dates of existing Asthma Diary encounter ``composition`` records. Compositions are document-level records which act as the container for all openEHR patient data.
 
-The `name/value` of the Compositin is the root name of the composition archetype `Allergies list` (case-sensitive). In a real-world example we would query on other factors to ensure we had the 'correct' list.
+The `name/value` of the Composition is the root name of the composition archetype `Allergies list` (case-sensitive). In a real-world example we would query on other factors to ensure we had the 'correct' list.
 
 #####AQL statement
 
@@ -92,7 +92,7 @@ select
     a/uid/value as uid_value,
     a/context/start_time/value as context_start_time
 from EHR e[ehr_id/value='0da489ee-c0ae-4653-9074-57b7f63c9f16']
-contains COMPOSITION a[openEHR-EHR-COMPOSITION.encounter.v1]
+contains COMPOSITION a[openEHR-EHR-COMPOSITION.care_summary.v0]
 where a/name/value='Allergies list'
 order by a/context/start_time/value desc
 offset 0 limit 1
@@ -119,6 +119,10 @@ Headers:
         }
     ]
 ````
+
+You will see that the compositionId (uid/value) has three parts.
+
+The first part is the uid itself, the second is a namespace which locates the openEHR repository, and the third part is a version number which is incremented each time the instance is updated.
 
 ###C. Retrieve the Patient's most recent Allergies List composition
 
@@ -180,7 +184,10 @@ This is in contrast to e.g a Nursing Observation Encouter, where every Encounter
 
 **When a PUT call is used the compositionId that is passed in must include the domain and version suffix  of the last version**
 
-e.g. `798e27b1-f2e8-48c3-8ced-42d4d27d1db3::answer.hopd.com::2`
+e.g. `798e27b1-f2e8-48c3-8ced-42d4d27d1db3::answer.hopd.com::2
+
+#####How to find the most recent CompositionId
+
 
 #####Call: Updates a new openEhr composition and returns the new CompositionId
 ````
