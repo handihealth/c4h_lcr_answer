@@ -17,4 +17,7 @@ LCR Allergies List, LCR Medications List, LCR Problems List, LCR Relevent Contac
 
 [Answer/LCR Handover Summary Ehrscape Technical tasks](/docs/leeds/Leeds_tech_tasks.md)
 
+[Ripple Cancer MDT Output Report Ehrscape Technical tasks](/docs/cancer/Tech_tasks.md)
+
+
 [Overview of openEHR and Ehrscape](/docs/training/openehr_intro.md)
