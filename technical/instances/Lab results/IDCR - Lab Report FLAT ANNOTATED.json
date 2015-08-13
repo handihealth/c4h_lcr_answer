@@ -1,0 +1,39 @@
+{
+  "ctx/composer_name": "{{Author}}::Dr Joyce Smith",
+  "ctx/health_care_facility|id": "999999-345",
+  "ctx/health_care_facility|name": "Northumbria Community NHS",
+  "ctx/id_namespace": "NHS-UK",
+  "ctx/id_scheme": "2.16.840.1.113883.2.1.4.3",
+  "ctx/language": "en",
+  "ctx/territory": "GB",
+  "ctx/time": "{{Date}}::2015-02-22T00:11:02.518+02:00",
+ 	"ctx/history_origin": "{{Sample DateTime}}::2015-02-21T00:11:02.518+02:00",
+  "laboratory_test_report/laboratory_test/test_name|value": "{{Test Name}}::U and E",
+	"laboratory_test_report/laboratory_test/test_name|code": "123456",
+	"laboratory_test_report/laboratory_test/test_name|terminology": "SNOMED-CT",	
+  "laboratory_test_report/laboratory_test/test_status|code": "//No match in UI //::at0038",
+  "laboratory_test_report/laboratory_test/test_status|value": "{{Test status}}::Final",
+  "laboratory_test_report/laboratory_test/test_status_timestamp": "{{Date}}::2015-02-22T00:11:02.518+02:00",
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|code,"Urea level"
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|value,"365755003"
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|terminology, "SNOMED-CT"
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value|magnitude":{{Result Value}} 95.6,
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value|unit": "{{Result Unit}}::mmol/l",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/comment": "{{Result comment}}may be artefact",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:1/result_value/_name|code": "{{Result Name}}::Creatinine level",
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:1/result_value/_name|value": "365755003",
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:1/result_value/_name|terminology": "SNOMED-CT",
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:1/result_value|magnitude":{{Result Value}}:: 145,
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:1/result_value|unit": "{{Result Unit}}::mmol/l",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value/_name|code": "{{Result Name}}::Sodium level",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value/_name|value": "365755003",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value/_name|terminology": "SNOMED-CT"
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value|magnitude":{{Result Value}} 132,
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value|unit": "{{Result Unit}}::mmol/l",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:3/result_value/_name|code": "{{Result Name}}::Potassium level",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:3/result_value/_name|value": "365755003",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:3/result_value/_name|terminology": "SNOMED-CT",
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:3/result_value|magnitude":{{Result Value}} 5.3,
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:3/result_value|unit": "{{Result Unit}}::mmol/l",
+  "laboratory_test_report/laboratory_test/conclusion": "{{Conclusion}}::Rapidly deteriorating renal function"
+}
