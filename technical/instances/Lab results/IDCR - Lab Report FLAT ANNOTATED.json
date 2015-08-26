@@ -20,9 +20,9 @@
 	//Each Result has a result name, value and unit + 'normal range'
 	
 	// Note that normal ranges have not yet been added to test data yet
-	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|code,"{{Result}}::Urea"
-	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|value,"365755003"
-	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|terminology, "SNOMED-CT"
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|code,"{{Result}}::Urea",
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|value,"365755003",
+	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value/_name|terminology, "SNOMED-CT",
 	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value|magnitude":{{Value}} 7.4,
   "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value|unit": "{{Unit}}::mmol/l",
   "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:0/result_value|normal_range": "2.5–6.6",
@@ -38,7 +38,7 @@
  
   "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value/_name|value": "{{Result}}::Sodium",
 	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value/_name|code": "365761000",
-  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value/_name|terminology": "SNOMED-CT" 
+  "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value/_name|terminology": "SNOMED-CT", 
 	"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value|magnitude":{{Value}} 135,
   "laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value|unit": "{{Unit}}::mmol/l",
 		"laboratory_test_report/laboratory_test/laboratory_test_panel/laboratory_result:2/result_value|normal_range": "133-146",
