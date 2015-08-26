@@ -6,14 +6,42 @@
   "ctx/id_scheme": "2.16.840.1.113883.2.1.4.3",
   "ctx/language": "en",
   "ctx/territory": "GB",
- "ctx/time": "{{Date}}::2015-02-22T00:11:02.518+02:00",
-  "laboratory_order/laboratory_test_request/lab_request/timing": "// Fixed value //::R5/2015-08-12T22:00:00+02:00/P2M",
-   "laboratory_order/laboratory_test_request/narrative": "//Fixed value //::Human readable instruction narrative",
-   "laboratory_order/laboratory_test_request/lab_request/service_requested": "{{Order Name}}::Full blood count",
-	 "laboratory_order/laboratory_test_tracker/ism_transition/current_state|code": "//Fixed value:://526",
+  "ctx/time": "{{Date}}::2015-02-22T00:11:02.518+02:00",
+   
+	// timing is a mandatory attribute in openEHR INSTRUCTION class archetypes but is really not needed here - any dummy string will do.
+	 "laboratory_order/laboratory_test_request/lab_request/timing": "// Fixed value //::R5/2015-08-12T22:00:00+02:00/P2M",
+   
+	 //The narrative should just be the same as the {{Order Name}}. It is mandatory in openEHR and is intended as a fall back human    // readable alternative to the structured order information.
+	 "laboratory_order/laboratory_test_request/narrative": "{{Order Name}}::Urea, electrolytes and creatinine measurement",
+  
+	 // Laboratory order test name should be SNOMED coded
+   "laboratory_order/laboratory_test_request/lab_request/service_requested|value": "{{Order Name}}::Urea, electrolytes and creatinine measurement",
+	  "laboratory_order/laboratory_test_request/lab_request/service_requested|code": "444164000",
+		 "laboratory_order/laboratory_test_request/lab_request/service_requested|terminology": "SNOMED-CT",
+	 
+	 // This is an action archetype which carries the state machine which tracks progress towards completion of the order
+	 // In this use case we are only recording that the order has been requested, not tracking any further events e.g lab received by lab etc.
+ 	 "laboratory_order/laboratory_test_tracker/ism_transition/current_state|code": "//Fixed value:://526",
    "laboratory_order/laboratory_test_tracker/ism_transition/current_state|value": "//Fixed value//::planned",
 	 "laboratory_order/laboratory_test_tracker/ism_transition/careflow_step|code": "//Fixed value//::at0003",
    "laboratory_order/laboratory_test_tracker/ism_transition/careflow_step|value": "//Fixed value//::Test requested",
-   "laboratory_order/laboratory_test_tracker/test_name": "{{Order Name}}::Full blood count",
+   "laboratory_order/laboratory_test_tracker/test_name|value": "{{Order Name}}::Urea, electrolytes and creatinine measurement",
+
+	 // The tracker test name (value and code) should match the Test name ordered 	 	"laboratory_order/laboratory_test_tracker/test_name|code": "444164000",
+	 "laboratory_order/laboratory_test_tracker/test_name|terminology": "SNOMED-CT",
    "laboratory_order/laboratory_test_tracker/time": "{{Date}}::2015-02-22T00:11:02.518+02:00"
  }
+ 
+ 
+ Other possible values (just a small subset) for the Order Name (via dropdown) are
+ 
+ "laboratory_order/laboratory_test_request/lab_request/service_requested|value": "Complete blood count",
+  "laboratory_order/laboratory_test_request/lab_request/service_requested|code": "26604007",
+	 "laboratory_order/laboratory_test_request/lab_request/service_requested|terminology": "SNOMED-CT",
+ 
+	 and
+	 
+	 "laboratory_order/laboratory_test_request/lab_request/service_requested|value": "Liver function tests - general",
+	  "laboratory_order/laboratory_test_request/lab_request/service_requested|code": "271552009",
+		 "laboratory_order/laboratory_test_request/lab_request/service_requested|terminology": "SNOMED-CT",
+ 

@@ -6,6 +6,7 @@
 	  "ctx/id_scheme": "2.16.840.1.113883.2.1.4.3",
 	  "ctx/language": "en",
 	  "ctx/territory": "GB",
+<<<<<<< HEAD
 		"ctx/time": "2015-04-22T00:11:02.518+02:00",
     "referral/referral_details/referral_request/request/referral_to": "Prostate cancer MDT",
     "referral/referral_details/referral_request/request/reason_for_referral": "Worsening back pain",
@@ -35,3 +36,30 @@
     "referral/referral_details/schedule_appointment/receiver/address:0/location": "Leeds Royal Infirmary",
     "referral/referral_details/schedule_appointment/time": "2015-07-29T11:29:54.879Z"
 }  
+=======
+		"ctx/time": "2015-02-22T00:11:02.518+02:00",
+    "referral/referral_details:0/referral_request/request/referral_to": "Prostate cancer MDT",
+    "referral/referral_details:0/referral_request/request/reason_for_referral": "Worsening back pain",
+    "referral/referral_details:0/referral_request/request/clinical_summary": "Patients back pain now becoming severe. No red flag signs.",
+    "referral/referral_details:0/referral_request/request/timing": "R4/2015-07-29T13:00:00+02:00/P1M",
+    "referral/referral_details:0/referral_request/narrative": "Prostate Cancer MDT Referral",
+    "referral/referral_details:0/order_referral/ism_transition/current_state|code": "526",
+    "referral/referral_details:0/order_referral/ism_transition/current_state|value": "planned",
+	  "referral/referral_details:0/order_referral/ism_transition/careflow_step|code": "at0002",
+    "referral/referral_details:0/order_referral/ism_transition/careflow_step|value": "Referral planned", "referral/referral_details:0/order_referral/referral_to": "Prostate cancer MDT",
+    "referral/referral_details:0/order_referral/receiver/address:0/address_type|code": "at0013",
+    "referral/referral_details:0/order_referral/receiver/address:0/location": "Leeds Royal Infirmary",
+    "referral/referral_details:0/order_referral/time": "2015-07-29T11:29:54.879Z",
+		
+    "referral/referral_details:0/schedule_appointment/ism_transition/current_state|code": "529",
+    "referral/referral_details:0/schedule_appointment/ism_transition/current_state|value": "scheduled",
+    "referral/referral_details:0/schedule_appointment/ism_transition/careflow_step|code": "at0003",
+    "referral/referral_details:0/schedule_appointment/ism_transition/current_state|value": "Appointment scheduled",
+    "referral/referral_details:0/schedule_appointment/referral_to": "Prostate cancer MDT",
+		"referral/referral_details:0/schedule_appointment/appointment_schedule/lower": "2015-08-05T11:30:00.879Z",
+    "referral/referral_details:0/schedule_appointment/appointment_schedule/upper": "2015-08-05T12:00.879Z",
+	  "referral/referral_details:0/schedule_appointment/receiver/address:0/address_type|code": "at0013",
+    "referral/referral_details:0/schedule_appointment/receiver/address:0/location": "Leeds Royal Infirmary",
+    "referral/referral_details:0/schedule_appointment/time": "2015-07-29T11:29:54.879Z"
+}
+>>>>>>> ac6df8423f69195390a8f975bd7aa5e3ea2d961d
